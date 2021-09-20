@@ -4,55 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Manipulating the DOM</title>
   <!-- Load Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
   <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-  <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
   <header class="page__header">
+    <h1 class="header-title">Eazi Success</h1>
     <nav class="navbar__menu">
       <!-- Navigation starts as empty UL that will be populated with JS -->
       <ul id="navbar__list"></ul>
     </nav>
   </header>
   <main>
-    <header class="main__hero">
-      <h1>Landing Page </h1>
-    </header>
-    <!-- Each Section has an ID (used for the anchor) and 
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
     <section id="section1" data-nav="Section 1" class="your-active-class">
       <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        <h2>Our Services</h2>
+        <a>Home loans</a>
+        <p>With a myriad of different options and products available on the market nowadays, let me look for the right product for your needs. </p>
+        <a>Refinancing</a>
+        <p>With the potential to save thousands dollars in the long run, it is something that we should definitely periodically review to ensure that you remain in a competitive position.</p>
+        <a>Car loans</a>
+        <p>Want to purchase a new set of wheels, however unsure of where and what is involved? We have our own panel of lenders specialising in vehicle finance and will be able to get competitive quotes to secure your car.</p>
+        <a>Investment loans</a>
+        <p>New to the landscape or done it before? I can assist organising the right loan options and structure to ensure we can build up your portfolio. </p>
       </div>
     </section>
+
     <section id="section2" data-nav="Section 2">
       <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        <h2>Get in touch</h2>
+        <div class="touch">
+          <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Your email address..">
+        
+            <label for="location">Location</label>
+            <select id="location" name="location">
+              <option value="south-australia">South Australia</option>
+              <option value="new-south-wales">New South Wales</option>
+              <option value="victoria">Victoria</option>
+              <option value="queensland">Queensland</option>
+              <option value="tasmania">Tasmania</option>
+              <option value="western-australia">Western Australia</option>
+              <option value="northern-territory">Northern Territory</option>
+              <option value="australian-capital-territory">Australian Capital Territory</option>
+            </select>
+        
+            <label for="loans">I want to...</label>
+            <select id="loans" name="loans">
+              <option value="homeloans">Home loans</option>
+              <option value="investment">Investment Property loans</option>
+              <option value="car">Car loans</option>
+              <option value="refinance">Refinancing</option>
+            </select>
+
+            <label for="comments">Anything else you'd like to tell us?</label>
+            <textarea id="comments" name="comments" placeholder="Write something.." style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit">
+          </form>
+        </div>
       </div>
     </section>
+
     <section id="section3" data-nav="Section 3">
       <div class="landing__container">
-        <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        <h2>You might also be interested in</h2>
+        <div class="card">
+          <img src="image/pic-1.jpeg" alt="loan-amount" class="content-pic"/>
+          <div class="card-content">
+             <h4><b>Working out how much to borrow</b></h4>
+             <article class="article">
+              Whether you’re in the market for your first home, next home, or an investment property, you’d probably like to know how much you could borrow. 
+             </article>
+             <a href="#" alt="read-more" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="image/pic-2.jpeg" alt="refinance" class="content-pic"/>
+          <div class="card-content">
+             <h4><b>How to refinance</b></h4>
+             <article class="article">
+              Refinancing your home loan should help you find a loan that better meets your needs. Understand what’s involved with our step by step guide on how to refinance a home loan.
+             </article>
+             <a href="#" alt="read-more" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="image/pic-3.jpeg" alt="process" class="content-pic"/>
+          <div class="card-content">
+             <h4><b>Loan application process</b></h4>
+             <article class="article">
+              Applying for a home loan can feel overwhelming. Our home loan application guide shows you where to start, takes you through the process and tells you what’s required when applying for a loan.
+             </article>
+             <a href="#" alt="read-more" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+    <section id="section4" data-nav="Section 4">
+      <div class="landing__container">
+        <h2>About us</h2>
+        <p>We focus on finance, to ensure for your future that you have a pathway to financial success throughout life. </br >
+           You get the best at Eazi Success.</br >
+           Our goal was to give people the right loan advice and help them get ahead – be it buying a home, paying off their loan sooner or growing their property portfolio.</br >
+        </p>
       </div>
     </section>
   </main>
   <footer class="page__footer">
-    <p>&copy Udacity</p>
+    <p>@Copyright 2021 Eazi Success. All Rights Reserved.</p>
   </footer>
 
 </body>
