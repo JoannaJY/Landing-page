@@ -17,7 +17,8 @@
  * Define Global Variables
  * 
 */
-
+const allSections = document.getElementsByTagName('section');
+const navLists = document.getElementById('navbar__list');
 
 /**
  * End Global Variables
@@ -34,6 +35,25 @@
 */
 
 // build the nav
+const navbarLists = () => {
+    for (let section of allSections) {
+        // create lists and links elements
+        const newLi = navLists.createElement('li');
+        const newLinks = navLists.createElement('a');
+        // create class attribute
+        newLi.className = "nav-lists";
+        newLinks.className = "nav-links";
+        newLinks.textContent = section.getAttribute('data-nav');
+        newLinks.setAttribute ('href', `#${section.getAttribute('id')}`);
+        // append child elements
+        newLi.appendChild(newLinks);
+        navLists.appendChild(newLi);
+    
+    }
+    return;
+}
+navbarLists();
+
 
 
 // Add class 'active' to section when near top of viewport
@@ -53,5 +73,4 @@
 // Scroll to section on link click
 
 // Set sections as active
-
 
