@@ -35,25 +35,24 @@ const navLists = document.getElementById('navbar__list');
 */
 
 // build the nav
-const navbarLists = () => {
+function navbarLists  (allSections,navLists)  {
     for (let section of allSections) {
         // create lists and links elements
-        const newLi = navLists.createElement('li');
-        const newLinks = navLists.createElement('a');
+        const newLi = document.createElement('li');
+        const newLinks = document.createElement('a');
         // create class attribute
         newLi.className = "nav-lists";
         newLinks.className = "nav-links";
-        newLinks.textContent = section.getAttribute('data-nav');
+        newLinks.innerHTML = section.getAttribute("data-nav");
         newLinks.setAttribute ('href', `#${section.getAttribute('id')}`);
         // append child elements
         newLi.appendChild(newLinks);
         navLists.appendChild(newLi);
     
     }
-    return;
 }
-navbarLists();
 
+navbarLists(allSections,navLists);
 
 
 // Add class 'active' to section when near top of viewport

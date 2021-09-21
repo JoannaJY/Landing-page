@@ -8,18 +8,39 @@ body {
     font-family: 'Merriweather', serif;
     color: #fff;
 }
-
-
+.page__header {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #fff;
+    top: 0;
+    width: 100%;
+}
+.navbar__menu{
+    margin-top: 70px;
+    text-align: center;
+    height: auto;
+}
 h1 {
     font-family: 'Fira Sans', sans-serif;
-    font-size: 3em;
-    margin: 2em 1rem;
+    font-size: 25px;
+    color: rgb(2, 22, 95);
+}
+.nav-links {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 50px;
+    font-size: 1.2em;
+    color:rgb(2, 22, 95) ;
+
 }
 
 @media only screen and (min-width: 35em){
     h1 {
-        font-size: 7em;
-        margin: 2em 4rem 1em;
+        font-size: 45px;
+        margin: 1em 2rem 0.5em;
     }
 }
 
@@ -80,8 +101,9 @@ section {
 
 /* Header Styles */
 .page__header {
+    display:flex;
+    flex-direction: row;
     background: #fff;
-    position: fixed;
     top: 0;
     width: 100%;
     z-index: 5;
