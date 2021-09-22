@@ -56,13 +56,35 @@ p {
 .land2 {
     padding-right: 10%;
 }
+.touch {
+    display: flex;
+    flex-direction: row;
+}
+.touch-p {
+    margin: 200px -30px 0 100px;
+    word-wrap: break-word;
+    font-size: 18px;
+    padding:50px;
+}
 .form {
     display: flex;
     flex-direction: column;
     width: 600px;
     text-align: center;
-    padding-left: 60%;
-   
+    margin-left: 10%;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px 1px rgb(65, 105, 165);
+}
+
+#input{
+    margin-top: 50px;
+    width: 250px;
+    margin-left: 30%;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(73, 138, 199);
+    color: white;
+
 }
 
 @media (max-width:1024px) { 
