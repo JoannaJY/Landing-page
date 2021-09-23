@@ -1,28 +1,11 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
 
-/**
- * Define Global Variables
- * 
-*/
+// Define Global Variables
+
 const allSections = document.getElementsByTagName('section');
 const navLists = document.getElementById('navbar__list');
 
-/**
- * End Global Variables
-*/
 
-/**
- * Begin Main Functions
- * 
-*/
-
-// build the nav
+// build the navigation bar
 function navbarLists  (allSections,navLists)  {
     for (let section of allSections) {
         // create lists and links elements
@@ -30,19 +13,13 @@ function navbarLists  (allSections,navLists)  {
         const newLinks = document.createElement('a');
         // create class attribute
         newLi.className = "nav-lists";
-        newLinks.className = "nav-links";
+        newLinks.className = "nav-link";
         newLinks.innerHTML = section.getAttribute("data-nav");
-
-        newLinks.setAttribute ('href', `#${section.getAttribute('id')}`);
-        // let headerLinks = document.getElementsByClassName('nav-links');
-        // function smooth (allSections, headerLinks){
-        //     for (let section of allSections) {
-        //         headerLinks.addEventListener('click', function(){
-        //             section.scrollIntoView({behavior: "smooth"});
-        //           });
-        //     }
-        // };
-
+        //smooth scroll to anchor
+        newLinks.addEventListener('click', function(){
+            section.scrollIntoView({behavior: "smooth"});
+        });
+            
         // append child elements
         newLi.appendChild(newLinks);
         navLists.appendChild(newLi);
@@ -51,35 +28,25 @@ function navbarLists  (allSections,navLists)  {
 }
 
 
-//Define header links variable
-
-
-
-
-
-
 navbarLists(allSections,navLists);
 
-// smooth (allSections, headerLinks);
 
-// Add class 'your-active-class' to section when near top of viewport
+
+// Add class 'active-class' to section when near top of each section
 
 
 function activeViewport (allSections){
-    console.log("active view post");
-    
-    
+   
     document.addEventListener('scroll', function(){
-        for (let i=0 ;i < allSections.length;i++) {
+        for (let i=0; i < allSections.length; i++) {
             let rect = allSections[i].getBoundingClientRect();
-            let navLinks = document.getElementsByClassName('nav-links');
+            let navLinks = document.getElementsByClassName('nav-link');
             let isActive = rect.top <= window.innerHeight && rect.top >= 0;
-            console.log("Change active status of",allSections[i].getAttribute("data-nav"));
+
             for(let nav of navLinks){
                 nav.classList.remove('active-class');
             }
             if (isActive) {
-                console.log(navLinks);
                 navLinks[i].classList.add('active-class');
                 break;
             }
@@ -87,19 +54,4 @@ function activeViewport (allSections){
     })
 }
 activeViewport (allSections);
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
 

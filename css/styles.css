@@ -23,7 +23,7 @@ h1 {
     font-size: 45px;
     color: rgb(2, 22, 95);
 }
-.nav-links {
+.nav-link{
     text-decoration: none;
     display: flex;
     flex-direction: row;
